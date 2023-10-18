@@ -13,12 +13,12 @@ struct ContentView: View {
                 randomCountry = asean.randomElement()!
             }
             currentCountry = randomCountry
+            selectedCountries.append(randomCountry)
         }    }
     func countryPressed (number: Int) {
         if asean[number] == currentCountry {
             correctGuesses += 1
         }
-        selectedCountries.append(asean[number])
         if selectedCountries.count == 10 {
             alertShown = true
         }
